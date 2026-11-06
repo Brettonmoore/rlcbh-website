@@ -1224,5 +1224,21 @@ html.v3-reveal-on [data-v3-reveal].v3-in{opacity:1;transform:none}
   reveal();
 })();
 </script>
+<!-- Netlify Identity widget: lets invite / recovery links that land on the
+     homepage open the Set password prompt, then sends the editor to the
+     admin page after login. Added 2026-11-06 (invites previously dead-ended
+     on a bare login box because this script was missing). -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function (user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function () {
+          document.location.href = "/admin.html";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
