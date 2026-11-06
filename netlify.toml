@@ -1,0 +1,24 @@
+# Real Life Church — RLCBH.com production deploy config (FLAT layout)
+# Base directory = this folder (production-prep/site-flat). Every file sits
+# at the root — this variant exists because the GitHub web upload flattens
+# folders. Publish root is the folder itself.
+[build]
+  publish = "."
+  functions = "."
+
+# latest-video.js sits at the root, so the functions directory is the root
+# itself; Netlify serves it at /.netlify/functions/latest-video, which is
+# the URL the Watch band in index.html fetches.
+
+# The two forms (plan-visit, volunteer) are detected automatically from
+# data-netlify="true" in index.html at deploy time. Email notifications for
+# both forms are enabled in the Netlify dashboard after the first deploy
+# (Site settings → Forms → Form notifications) — that step needs the church
+# Netlify account and cannot be done from files.
+
+[functions]
+  node_bundler = "esbuild"
+
+# The editor login page is admin.html at the root (Decap CMS, loads
+# config.yml from the same root). The site is a single static index.html
+# with in-page navigation, so no redirects are needed for the public pages.

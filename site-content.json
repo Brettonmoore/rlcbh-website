@@ -1,0 +1,208 @@
+{
+  "sermonSeries": {
+    "eyebrow": "Current sermon series",
+    "title": "Made To Rule",
+    "tagline": "Discover your Kingdom identity, your divine purpose, and your place in God’s reign.",
+    "buttonLabel": "Watch Latest",
+    "buttonPage": "sermons",
+    "artwork": "img-04-86e348a76a.webp",
+    "artworkAlt": "Made To Rule — current sermon series artwork"
+  },
+  "youtube": {
+    "channelId": "UCcQ6BTdOPS78nbcLEii16Sw",
+    "streamsUrl": "https://www.youtube.com/@RealLifeOnline/streams"
+  },
+  "whatsHappening": [
+    {
+      "time": "Sundays at 10:30 AM",
+      "title": "Worship Service",
+      "blurb": "Join us for heartfelt worship and a message rooted in Scripture.",
+      "buttonLabel": "Join us",
+      "buttonPage": "visit"
+    },
+    {
+      "time": "Sundays at 9:00 AM",
+      "title": "Bible Studies",
+      "blurb": "Dig deeper into God’s Word in a relaxed, conversational setting.",
+      "buttonLabel": "Join us",
+      "buttonPage": "visit"
+    }
+  ],
+  "eventsPage": [
+    {
+      "recurs": "weekly",
+      "weekday": 0,
+      "time": "10:30 AM",
+      "title": "Worship Service",
+      "blurb": "There's nothing like starting your Sunday together — heartfelt worship, a message rooted in Scripture, and a room full of people glad you came. Come as you are and jump in!",
+      "buttonLabel": "Join us",
+      "buttonPage": "visit"
+    },
+    {
+      "recurs": "weekly",
+      "weekday": 0,
+      "time": "9:00 AM",
+      "title": "Bible Studies",
+      "blurb": "Go deeper into God's Word in a relaxed, conversational setting where every question is welcome. Bring a friend — you'll leave encouraged!",
+      "buttonLabel": "Join us",
+      "buttonPage": "visit"
+    },
+    {
+      "recurs": "weekly",
+      "weekday": 0,
+      "time": "10:30 AM",
+      "title": "Kids' Life",
+      "blurb": "Kids from infant through 5th grade get their own safe, fun, Bible-based service during Sunday worship — secure check-in and background-checked volunteers in every room. They'll be asking to come back!",
+      "buttonLabel": "Explore Kids",
+      "buttonPage": "kids"
+    },
+    {
+      "recurs": "weekly",
+      "weekday": 3,
+      "time": "6:00–7:30 PM",
+      "title": "Student Life",
+      "blurb": "Students in 6th–12th grade take over Wednesday nights with games, real talk, and faith that sticks. Bring a friend — there's a seat saved for you!",
+      "buttonLabel": "Explore Youth",
+      "buttonPage": "youth"
+    },
+    {
+      "recurs": "weekly",
+      "weekday": 3,
+      "title": "Family Night",
+      "blurb": "Wednesday evenings are family night at Real Life — small groups for the grown-ups while Kids' Life and Student Life run for the younger crowd. One trip, something for everybody!",
+      "buttonLabel": "Explore Families",
+      "buttonPage": "families"
+    },
+    {
+      "dateISO": "2026-12-13",
+      "time": "4:00–5:30 PM",
+      "title": "Christmas Play",
+      "blurb": "The Christmas story comes to life on stage — music, laughter, and the wonder of that holy night, shared by our Real Life family. Bring the whole family and celebrate with us!",
+      "buttonLabel": "Plan a Visit",
+      "buttonPage": "visit"
+    }
+  ],
+  "smallGroups": [
+    {
+      "name": "Men in the Arena",
+      "focus": "A Monday-night gathering for men to grow in faith and brotherhood.",
+      "day": "Mondays",
+      "time": "6:30 PM",
+      "place": "Panera Bread, 1830 Eglin Street, Rapid City, SD 57701"
+    },
+    {
+      "name": "MomCo",
+      "focus": "A community for moms to connect, be encouraged, and grow together.",
+      "day": "Tuesdays",
+      "time": "6:00–8:00 PM",
+      "place": "Real Life Church"
+    },
+    {
+      "name": "Women’s Bible Study",
+      "focus": "Studying Psalms.",
+      "day": "Tuesdays",
+      "time": "6:30–8:00 PM",
+      "place": "Real Life Church"
+    },
+    {
+      "name": "Men’s Morning Bible Study",
+      "focus": "Studying Thessalonians.",
+      "day": "Wednesdays",
+      "time": "6:00–7:00 AM",
+      "place": "Real Life Church"
+    },
+    {
+      "name": "Hinckley Small Group",
+      "focus": "For parents dropping kids off at Youth or Real Life Kids — studying Genesis.",
+      "day": "Wednesdays",
+      "time": "6:00–7:15 PM",
+      "place": "Real Life Church"
+    }
+  ],
+  "serveTeams": [
+    {
+      "name": "Real Life Kids",
+      "blurb": "Help children learn about Jesus in a safe, fun, welcoming place.",
+      "buttonLabel": "Join this team",
+      "joinUrl": "https://www.reallifenaz.org/next-steps"
+    },
+    {
+      "name": "Youth",
+      "blurb": "Connect with students and help them grow in faith and friendship.",
+      "buttonLabel": "Join this team",
+      "joinUrl": "https://www.reallifenaz.org/next-steps"
+    },
+    {
+      "name": "Worship Team",
+      "blurb": "Lead the church in worship through music and singing.",
+      "buttonLabel": "Join this team",
+      "joinUrl": "https://www.reallifenaz.org/next-steps"
+    },
+    {
+      "name": "Welcome Team",
+      "blurb": "Greet people warmly and help every guest feel at home.",
+      "buttonLabel": "Join this team",
+      "joinUrl": "https://www.reallifenaz.org/next-steps"
+    },
+    {
+      "name": "Prayer Team",
+      "blurb": "Pray with and for people in our church and community.",
+      "buttonLabel": "Join this team",
+      "joinUrl": "https://www.reallifenaz.org/next-steps"
+    },
+    {
+      "name": "Small Groups",
+      "blurb": "Lead or host a small group and help people find their people. Gather a few friends, open God's Word, and grow in faith together.",
+      "buttonLabel": "Join this team",
+      "joinUrl": "https://www.reallifenaz.org/next-steps"
+    }
+  ],
+  "serveConnect": [
+    {
+      "title": "Connect With Us",
+      "blurb": "Fill out this card so we can get to know you and help you take your next step.",
+      "buttonLabel": "Connect with us",
+      "url": "https://www.reallifenaz.org/next-steps"
+    },
+    {
+      "title": "Plan Your Visit",
+      "blurb": "Let us know you're coming so we can make your experience warm and welcoming.",
+      "buttonLabel": "Plan your visit",
+      "url": "https://www.reallifenaz.org/next-steps"
+    },
+    {
+      "title": "Prayer",
+      "blurb": "Receive prayer, support, and resources.",
+      "buttonLabel": "Request prayer",
+      "url": "https://www.reallifenaz.org/next-steps"
+    },
+    {
+      "title": "Share Your Story",
+      "blurb": "Sharing your faith story can inspire others.",
+      "buttonLabel": "Share your story",
+      "url": "https://www.reallifenaz.org/next-steps"
+    },
+    {
+      "title": "News",
+      "blurb": "Subscribe to our weekly newsletter so you don't miss a thing.",
+      "buttonLabel": "Subscribe",
+      "url": "https://www.reallifenaz.org/next-steps"
+    }
+  ],
+  "youthPage": {
+    "eyebrow": "Youth",
+    "heading": "Faith, friendship, and real life.",
+    "lede": "Students connect with leaders and friends as they grow in faith.",
+    "meetingLine": "Student Life meets Wednesday nights, 6:00–7:30 PM at the church.",
+    "photo": "img-07-cd9dff89b5.jpg",
+    "photoAlt": "Real Life youth and leaders gathered outdoors",
+    "videoUrl": ""
+  },
+  "teamBios": {
+    "aaron": "",
+    "janie": "",
+    "callie": "",
+    "leeann": "",
+    "sheridan": ""
+  }
+}

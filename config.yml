@@ -1,0 +1,138 @@
+# Decap CMS config — Real Life Church site editor (rlcbh.com/admin)
+#
+# STATUS (2026-11-06): LIVE wiring. The page loads its editable content from
+# content/site-content.json at runtime (fetched by the rl-editable-content
+# script in index.html), and this config edits exactly that file — same
+# keys, same values. Every key present in the JSON has a field below, so a
+# Decap save round-trips the whole file without dropping data.
+#
+# The only steps left are in the Netlify dashboard: enable Netlify
+# Identity, enable Git Gateway, invite Bretton / Nikki / LeeAnn.
+# Do NOT invite editors until Identity + Git Gateway are on.
+# Layout and design stay maintainer-handled, per the launch plan — editors
+# only get the content collections below.
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "site-content"
+    label: "Site Content"
+    files:
+      - name: "site-content"
+        label: "Sermon series, events, groups, bios"
+        file: "site-content.json"
+        fields:
+          - label: "Current Sermon Series"
+            name: "sermonSeries"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "text" }
+              - { label: "Button label", name: "buttonLabel", widget: "string", required: false }
+              - { label: "Button page", name: "buttonPage", widget: "string", required: false }
+              - { label: "Artwork (fallback graphic)", name: "artwork", widget: "image", required: false }
+              - { label: "Artwork alt text", name: "artworkAlt", widget: "string", required: false }
+          - label: "What's Happening (homepage)"
+            name: "whatsHappening"
+            widget: "list"
+            fields:
+              - { label: "Time", name: "time", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Blurb", name: "blurb", widget: "text" }
+              - { label: "Button label", name: "buttonLabel", widget: "string", required: false }
+              - { label: "Button page", name: "buttonPage", widget: "string", required: false }
+          - label: "Events Page"
+            name: "eventsPage"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.time}}"
+            fields:
+              - label: "Repeats"
+                name: "recurs"
+                widget: "select"
+                options: ["weekly"]
+                required: false
+                hint: "Leave empty for a one-off event (it is then labeled Important automatically). Set a date below for one-offs."
+              - label: "Weekday (weekly events only, 0=Sunday … 6=Saturday)"
+                name: "weekday"
+                widget: "number"
+                value_type: "int"
+                min: 0
+                max: 6
+                required: false
+              - label: "Date (one-off events only, YYYY-MM-DD)"
+                name: "dateISO"
+                widget: "string"
+                required: false
+              - { label: "Time", name: "time", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Blurb (1–2 sentences, exciting tone)", name: "blurb", widget: "text" }
+              - { label: "Button label", name: "buttonLabel", widget: "string", required: false }
+              - { label: "Button page", name: "buttonPage", widget: "string", required: false }
+          - label: "Small Groups"
+            name: "smallGroups"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Focus / topic", name: "focus", widget: "string", required: false }
+              - { label: "Day", name: "day", widget: "string", required: false }
+              - { label: "Time", name: "time", widget: "string", required: false }
+              - { label: "Place", name: "place", widget: "string", required: false }
+              - { label: "Leader", name: "leader", widget: "string", required: false }
+          - label: "Youth Page"
+            name: "youthPage"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+              - { label: "Heading", name: "heading", widget: "string", required: false }
+              - { label: "Intro line", name: "lede", widget: "text", required: false }
+              - { label: "Meeting line", name: "meetingLine", widget: "string", required: false }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+              - { label: "Photo alt text", name: "photoAlt", widget: "string", required: false }
+              - { label: "Monthly Video URL (YouTube)", name: "videoUrl", widget: "string", required: false }
+          - label: "Team Bios (written by each staff member; empty = plain card)"
+            name: "teamBios"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Aaron", name: "aaron", widget: "text", required: false }
+              - { label: "Janie", name: "janie", widget: "text", required: false }
+              - { label: "Callie", name: "callie", widget: "text", required: false }
+              - { label: "LeeAnn", name: "leeann", widget: "text", required: false }
+              - { label: "Sheridan", name: "sheridan", widget: "text", required: false }
+          # The three collections below were added 2026-11-06 so that every
+          # key in content/site-content.json is covered by a field — a Decap
+          # save then round-trips the whole file and cannot silently drop
+          # the Serve page data or the YouTube channel settings.
+          - label: "Serve Teams (Serve page cards + volunteer form options)"
+            name: "serveTeams"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Blurb", name: "blurb", widget: "text" }
+              - { label: "Button label", name: "buttonLabel", widget: "string", required: false }
+              - { label: "Join URL", name: "joinUrl", widget: "string", required: false }
+          - label: "Serve Page — More Ways to Connect"
+            name: "serveConnect"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Blurb", name: "blurb", widget: "text" }
+              - { label: "Button label", name: "buttonLabel", widget: "string", required: false }
+              - { label: "URL", name: "url", widget: "string", required: false }
+          - label: "YouTube (Watch page auto-update)"
+            name: "youtube"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Channel ID", name: "channelId", widget: "string", required: false }
+              - { label: "Streams URL", name: "streamsUrl", widget: "string", required: false }
