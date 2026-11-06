@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Confirming your editor account — Real Life Church</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif; text-align: center; padding: 3rem 1rem; color: #343637;">
+  <h1 style="font-size: 1.4rem;">One moment…</h1>
+  <p>This page finishes setting up your Real Life Church editor login.<br />
+  A sign-in box should appear here in a few seconds.</p>
+  <p>If nothing appears after 15 seconds, go to
+     <a href="/admin.html">the editor login page</a> and sign in there.</p>
+
+  <!-- Standalone Netlify Identity token landing page (added 2026-11-06).
+       The homepage is a single-page app that consumes the URL hash for its
+       own navigation, and the Decap admin page rewrites the hash for its
+       routing, so email tokens (invite / confirmation / recovery) die on
+       both. This page has no router and no app scripts: the Identity widget
+       reads the token from the URL on load and processes it cleanly.
+       Usage: take the link from the Netlify email and change the front of
+       the address to /confirm.html, keeping everything after the # the
+       same. After a login here, the script sends the editor to /admin.html. -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function (user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function () {
+            document.location.href = "/admin.html";
+          });
+        }
+      });
+      window.netlifyIdentity.init();
+    }
+  </script>
+</body>
+</html>
