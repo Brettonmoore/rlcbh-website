@@ -10,6 +10,11 @@
   <!-- Decap CMS admin. Logins are invite-only via Netlify Identity
        (git-gateway backend, see config.yml). Enable Identity + Git Gateway
        in the Netlify dashboard after the first deploy. -->
+  <!-- Netlify Identity widget: REQUIRED on this page so invite and
+       password-recovery links (which arrive with a token in the URL)
+       are turned into a Set password prompt. Added 2026-11-06 after the
+       first invites landed on a bare login box. -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
